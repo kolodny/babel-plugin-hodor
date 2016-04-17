@@ -1,12 +1,12 @@
 "use strict";
 
-var hodor = function hodor() {
+var hodOr = function hodOr() {
   var HodOr = 22;console.log(HodOr);
 };
-function HodOr() {
-  var hod0r = 22;console.log(hod0r);
+function hodor() {
+  var HodOr = 22;console.log(HodOr);
 }
-var hodOr = function hodOr() {
-  var Hodor = 22,
-      hod0r = 44;console.log(hod0r, Hodor);
+var Hodor = function Hodor() {
+  var HodOr = 22,
+      hod0r = 44;console.log(hod0r, HodOr);
 };

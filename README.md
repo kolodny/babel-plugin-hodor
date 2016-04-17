@@ -7,6 +7,8 @@
 
 Babel plugin to hodor. Inspired by https://redd.it/4dqlbr
 
+![Hodor](/hodor.jpg)
+
 ## Installation
 
 ```sh
@@ -51,9 +53,9 @@ const foo = bar => {
 // output
 "use strict";
 
-var hodor = function hodor(HodOr) {
-  var Hodor = 123;
-  return HodOr + Hodor;
+var hodor = function hodor(Hodor) {
+  var hodOr = 123;
+  return Hodor + hodOr;
 };
 
 ```

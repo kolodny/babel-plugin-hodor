@@ -2,12 +2,14 @@ export default function ({types: t}) {
   const hodorSymbol = Symbol();
   const hodor = path => {
     Object.keys(path.scope.bindings).forEach(binding => {
-      const hoder = new Hodor();
-      const bindings = path.scope.getAllBindings();
-      let newHodor;
-      do { newHodor = hoder.next() } while (bindings[newHodor]);
-      path.scope.rename(binding, newHodor);
-
+      if (!path.scope.bindings[binding][hodorSymbol]) {
+        const hoder = new Hodor();
+        const bindings = path.scope.getAllBindings();
+        let newHodor;
+        do { newHodor = hoder.next() } while (bindings[newHodor]);
+        path.scope.rename(binding, newHodor);
+        path.scope.getBinding(newHodor)[hodorSymbol] = true;
+      }
     });
   }
   const Hodor = (function() {
